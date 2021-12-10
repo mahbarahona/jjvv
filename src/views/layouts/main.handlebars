@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJVV</title>
+        <style>
+        :root{
+            --font-size:16px;
+            --color-primary:#30E3CA;
+            --color-primary-ligth:#1DB9C3;
+            --color-primary-shade:#11999E;
+
+            --color-dark:#40514E;
+            --color-light:#E4F9F5;
+        }
+        html{
+            font-size: var(--font-size);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+        }
+        body{
+            background-color: var(--color-primary-ligth);
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(0,0,0,0.8);
+        }
+        .header{
+            position: fixed;
+            top: 0;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: .5rem;
+            background-color: var(--color-primary);
+            box-shadow: 0px 0px 15px var(--color-primary-ligth);
+        }
+        .header__title{
+            font-weight: bold;
+        }
+        .header__nombre-organizacion{
+            font-size: 0.8rem;
+            font-weight: 100;
+        }
+
+
+
+        main{
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            gap: 1rem;
+
+            padding: 4rem 1rem 0 1rem ;
+
+
+            height: 100%;
+
+        }
+        @media (min-width:600px){
+            main{
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .ubicacion .btn{
+            background-color: royalblue;
+            color: white;
+
+        }
+        .ubicacion__direccion{
+            font-size: 0.8rem;
+        }
+
+        .telefonos{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .telefonos .btn{
+            min-height: 80px;
+        }
+
+
+
+        .horario__horas p{
+            text-decoration: underline;
+            margin-bottom: .5rem;
+        }
+        .horario__horas ul{
+            font-size: 0.9rem;
+        }
+
+        .btn{
+            border-radius: 40px;
+            min-height: 48px;
+            border: none;
+            display: block;
+            width: 100%;
+            transition: all .3s ease-in-out;
+            background-color: royalblue;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        .btn:active{
+            transform: scale(0.95);
+        }
+
+        .btn.jjvv{
+            background-color: var(--color-primary);
+            
+        }
+        .btn.bomberos{
+            background-color: #EC255A;
+            color: black;
+        }
+        .btn.carabineros{
+            background-color: rgba(0, 111, 39, 1);
+            color: white;
+
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            border-radius: 4px;
+            background-color: white;
+            padding: 1rem;
+
+            box-shadow: 0px 0px 14px rgba(0,0,0,0.1);
+        }
+
+        .cerrado{
+            color: rgba(0,0,0,0.4);
+            font-size: 0.9rem;
+            margin-left: .3rem;
+        }
+    </style>
+</head>
+<body>
+        {{{body}}}
+        
+</body>
+</html>

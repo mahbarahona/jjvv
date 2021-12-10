@@ -1,0 +1,71 @@
+    <header class="header">
+        <h5 class="header__title">JJVV</h5>
+        <p class="header__nombre-organizacion">German Riesco</p>
+    </header>
+    <main>
+        <section class="horario card">
+                <h3>🕐 Horario</h3>
+                <article class="horario__horas">
+                    <p>Lunes a Viernes</p>
+                    <ul>
+                        <li> 09:00 - 14:00 </li>
+                        <li class="cerrado"> 14:00 - 17:00 (cerrado) </li>
+                        <li> 17:00 - 19:00 </li>
+                    </ul>
+                </article>
+                <article class="horario__horas">
+                    <p>Sabado</p>
+                    <ul>
+                        <li>10:00 - 14:00</li>
+                    </ul>
+                </article>
+
+        </section>
+        <section class="ubicacion card">
+            <h3>🗺️ Dirección</h3>
+            <p class="ubicacion__direccion">Pedro Alarcon 164, San Joaquin</p>
+            <button class="btn" id="btn-maps" lat="-33.4904217" long="-70.6222505">
+                Quiero saber como llegar
+            </button>
+        </section>
+        <section class="directiva card" style="display: none;">
+            <h3>Directiva</h3>
+            <ul>
+                <li>Presidente</li>
+                <li>Vice-presidente</li>
+                <li>Tesorero</li>
+                <li>Secretario</li>
+            </ul>
+        </section>
+        <section class="telefonos card">
+            <h3>📞 Teléfonos </h3>
+            <button class="btn jjvv">
+                <h3>+562 333 66 98</h3>
+                <p>Llamar a Junta de Vecinos</p>                
+            </button>
+            <button class="btn">
+                <h3>+562 333 66 98</h3>
+                <p>Llamar a CESFAM</p>                
+            </button>
+            <button class="btn carabineros">
+                <h3>133</h3>
+                <p>Llamar a Carabineros</p>                
+            </button>
+            <button class="btn  bomberos">
+                <h3>131</h3>
+                <p>Llamar a Bomberos</p>                
+            </button>
+       </section>
+    </main>
+    <footer></footer>
+    <script>
+        const sendToMaps = () =>{
+            const lat = mapButton.getAttribute('lat');
+            const long = mapButton.getAttribute('long');
+            const url = `https://www.google.com/maps/dir/?api=1&travelmode=walking&layer=traffic&destination=${lat},${long}`;
+            window.open(url,'_blank')
+        }
+        const mapButton = document.querySelector('#btn-maps')
+        mapButton.addEventListener('click',sendToMaps)
+       
+    </script>
