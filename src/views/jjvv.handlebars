@@ -5,11 +5,14 @@
     <main>
         <section class="horario card">
                 <h3>🕐 Horario</h3>
+                <div class="horario__content">
+
+                
                 <article class="horario__horas">
                     <p>Lunes a Viernes</p>
                     <ul>
                         <li> 09:00 - 14:00 </li>
-                        <li class="cerrado"> 14:00 - 17:00 (cerrado) </li>
+                        {{!-- <li class="cerrado"> 14:00 - 17:00 (cerrado) </li> --}}
                         <li> 17:00 - 19:00 </li>
                     </ul>
                 </article>
@@ -19,11 +22,15 @@
                         <li>10:00 - 14:00</li>
                     </ul>
                 </article>
-
+                </div>
         </section>
         <section class="ubicacion card">
-            <h3>🗺️ Dirección</h3>
-            <p class="ubicacion__direccion">Pedro Alarcon 164, San Joaquin</p>
+            <h3>📍 Dirección</h3>
+            <article class="ubicacion__direccion">
+                <p class="ubicacion__direccion--calle">Pedro Alarcon #164</p>
+                <p class="ubicacion__direccion--comuna">San Joaquin</p>
+
+            </article>
             <button class="btn" id="btn-maps" lat="-33.4904217" long="-70.6222505">
                 Quiero saber como llegar
             </button>
