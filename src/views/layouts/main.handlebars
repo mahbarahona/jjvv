@@ -25,10 +25,20 @@
 
         }
         body{
-            background-color: var(--color-primary-ligth);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             height: 100vh;
+            background-color: var(--color-primary-ligth);
             font-family: Arial, Helvetica, sans-serif;
             color: rgba(0,0,0,0.8);
+        }
+
+        footer{
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 0.7rem;
         }
         .header{
             position: fixed;
@@ -55,13 +65,8 @@
             display: -webkit-flex;
             display: flex;
             flex-direction: column;
-            /* justify-content: space-between; */
             gap: 1rem;
-
-            padding: 4rem 1rem 0 1rem ;
-
-
-            height: 100%;
+            padding: 4rem 1rem 1rem 1rem ;
 
         }
         @media (min-width:600px){
@@ -84,13 +89,8 @@
         .telefonos{
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.3rem;
         }
-
-        .telefonos .btn{
-            min-height: 80px;
-        }
-
 
 
         .horario__horas p{
@@ -103,7 +103,6 @@
 
         .horario__content{
             display: flex;
-            justify-content: center;
             gap: 3rem;
         }
 
@@ -120,9 +119,16 @@
             font-size: 0.7rem;
             text-transform: uppercase;
         }
+
+        .telefonos__numero{
+            font-size: 0.8rem;
+        }
+        .telefonos__cta{
+            font-size: 1rem;
+        }
         .btn{
             border-radius: 40px;
-            min-height: 48px;
+            min-height: 60px;
             border: none;
             display: block;
             width: 100%;
@@ -130,6 +136,7 @@
             background-color: royalblue;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
             color: white;
+            font-size: 1rem;
         }
 
         .btn:active{
