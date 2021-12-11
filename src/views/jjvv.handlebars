@@ -35,30 +35,21 @@
                 Quiero saber como llegar
             </button>
         </section>
-        <section class="directiva card" style="display: none;">
-            <h3>Directiva</h3>
-            <ul>
-                <li>Presidente</li>
-                <li>Vice-presidente</li>
-                <li>Tesorero</li>
-                <li>Secretario</li>
-            </ul>
-        </section>
         <section class="telefonos card">
             <h3>📞 Teléfonos </h3>
-            <button class="btn jjvv">
+            <button class="btn jjvv call"  num="+5623336698">
                 <p class="telefonos__cta">Llamar a Junta de Vecinos</p>                
                 <h3 class="telefonos__numero">+562 333 66 98</h3>
             </button>
-            <button class="btn">
+            <button class="btn call"  num="+5623336777">
                 <p class="telefonos__cta">Llamar a CESFAM</p>                
-                <h3 class="telefonos__numero">+562 333 66 98</h3>
+                <h3 class="telefonos__numero">+562 333 67 77</h3>
             </button>
-            <button class="btn carabineros">
+            <button class="btn carabineros call"  num="133">
                 <p class="telefonos__cta">Llamar a Carabineros</p>                
                 <h3 class="telefonos__numero">133</h3>
             </button>
-            <button class="btn  bomberos">
+            <button class="btn  bomberos" call   num="131">
                 <p class="telefonos__cta">Llamar a Bomberos</p>                
                 <h3 class="telefonos__numero">131</h3>
             </button>
@@ -74,7 +65,16 @@
             const url = `https://www.google.com/maps/dir/?api=1&travelmode=walking&layer=traffic&destination=${lat},${long}`;
             window.open(url,'_blank')
         }
+
+        const call= (number) =>{
+            window.open(`tel:${number}`,'_blank')
+        }
         const mapButton = document.querySelector('#btn-maps')
+        const callLinks = Array.from(document.querySelectorAll('.btn.call'))
+
         mapButton.addEventListener('click',sendToMaps)
-       
+        callLinks.map( link =>{
+            const number = link.getAttribute('num')
+            link.addEventListener('click',call,number)
+        })
     </script>
