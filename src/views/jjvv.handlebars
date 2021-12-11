@@ -6,13 +6,10 @@
         <section class="horario card">
                 <h3>🕐 Horario</h3>
                 <div class="horario__content">
-
-                
                 <article class="horario__horas">
                     <p>Lunes a Viernes</p>
                     <ul>
                         <li> 09:00 - 14:00 </li>
-                        {{!-- <li class="cerrado"> 14:00 - 17:00 (cerrado) </li> --}}
                         <li> 17:00 - 19:00 </li>
                     </ul>
                 </article>
@@ -29,7 +26,6 @@
             <article class="ubicacion__direccion">
                 <p class="ubicacion__direccion--calle">Pedro Alarcon #164</p>
                 <p class="ubicacion__direccion--comuna">San Joaquin</p>
-
             </article>
             <button class="btn" id="btn-maps" lat="-33.4904217" long="-70.6222505">
                 Quiero saber como llegar
@@ -49,7 +45,7 @@
                 <p class="telefonos__cta">Llamar a Carabineros</p>                
                 <h3 class="telefonos__numero">133</h3>
             </button>
-            <button class="btn  bomberos" call   num="131">
+            <button class="btn  bomberos call"   num="131">
                 <p class="telefonos__cta">Llamar a Bomberos</p>                
                 <h3 class="telefonos__numero">131</h3>
             </button>
@@ -66,15 +62,15 @@
             window.open(url,'_blank')
         }
 
-        const call= (number) =>{
-            window.open(`tel:${number}`,'_blank')
-        }
+
         const mapButton = document.querySelector('#btn-maps')
         const callLinks = Array.from(document.querySelectorAll('.btn.call'))
-
+         
         mapButton.addEventListener('click',sendToMaps)
         callLinks.map( link =>{
             const number = link.getAttribute('num')
-            link.addEventListener('click',call,number)
+            link.addEventListener('click',() =>{
+                window.open(`tel:${number}`,'_blank')
+            })
         })
     </script>
